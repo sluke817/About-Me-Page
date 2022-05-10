@@ -1,0 +1,236 @@
+<html>
+    <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    </head>
+    <style>
+        body {
+            background-image: url('/bg.png');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            padding-left: 20px;
+            padding-right: 20px;
+
+        }
+        h1, h2, h3, h4, h5, h6, p, td, th{
+            color:white;
+
+        }
+        #buttonGroup {
+            padding-bottom: 20px;
+        }
+        #resume {
+            position: absolute;
+            bottom: 5px;
+        }
+        
+    </style>
+    <body>
+        <h1>Luke Schaefer</h1>
+        <h2>College of Engineering - Computer Science</h2>
+        <div id="buttonGroup" class="btn-group">
+            <button class="btn btn-danger" onClick="togglePage(0)">Work Expierence</button>
+            <button class="btn btn-primary" onClick="togglePage(1)">Relevent Classes</button>
+            <button class="btn btn-warning" onClick="togglePage(2)">Future Plans</button>
+            <button class="btn btn-secondary" onClick="togglePage(3)">Clear</button>
+        </div>
+        <div id="intro">
+            <h3>Hello! Welcome to my page!</h3>
+            <p>Please choose from one of the above options to learn more about me!</p>
+        </div>
+        <div id="work" style="display: none">
+            <table class="table">
+                <thread class="thead-light">
+                    <tr>
+                        <th>Organization</th>
+                        <th>Type of Job</th>
+                        <th>More Info</th>
+                    </tr>
+                </thread>
+                <tr>
+                    <td>Defense Spectrum Organization (DSO) within DISA</td>
+                    <td>Internship</td>
+                    <td>
+                        <button class="btn btn-info" onClick="showInfo(0)">Show More</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Requirements and Analysis Office (RAO) within DISA</td>
+                    <td>Internship</td>
+                    <td>
+                        <button class="btn btn-info" onClick="showInfo(1)">Show More</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>University of Missouri - Department of Agricultural Engineering</td>
+                    <td>Software Engineering</td>
+                    <td>
+                        <button class="btn btn-info" onClick="showInfo(2)">Show More</button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div id="classes" style="display: none">
+            <table class="table">
+                <thread class="thead-light">
+                    <tr>
+                        <th>Relevent Courses</th>
+                        <th>Semester Taken</th>
+                        <th>More Info</th>
+                    </tr>
+                </thread>
+                <tr>
+                    <td>CS 2830</td>
+                    <td>Spring 2022</td>
+                    <td>
+                        <button class="btn btn-info" onClick="showInfo(3)">Show More</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>CS 2050</td>
+                    <td>Spring 2021</td>
+                    <td>
+                        <button class="btn btn-info" onClick="showInfo(4)">Show More</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>CS 3050</td>
+                    <td>Fall 2021</td>
+                    <td>
+                        <button class="btn btn-info" onClick="showInfo(5)">Show More</button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div id="responses">
+            <div id="0" style="display: none">
+                <h3>Defense Information Systems Agency (DISA)</h3>
+                <h4><em>Defense Spectrum Organization (DSO)</em></h4>
+                <h5>March 2022 - Present</h5>
+                <p> 
+                    Working for the DSO has provided me with so much useful expierence already. The main "project" for me this summer is to 
+                    turn an old Fortran program into a C++ program and provide it as a microservice to the rest of the organization.
+                    So far, I have been in a Linux environment attempting to build the original program in a DOS emulator.
+                    This project has taken me down so many rabbit holes, and I have learned so much about not only the process of 
+                    developing a usable product in the tech space, but I have gained skills in finding a real solution to a tech problem. 
+                </p>
+            </div>
+            <div id="1" style="display: none">
+                <h3>Defense Information Systems Agency (DISA)</h3>
+                <h4><em>Requirements and Analysis Office (RAO)</em></h4>
+                <h5>May 2021 - August 2021</h5>
+                <p>
+                    During the summer of 2021 I worked with RAO within DISA. They were a group tasked with providing tech breifings to senior
+                    directors. RAO has worked with nearly every part of the Department of Defense at one time or another. I worked on 
+                    numerous projects that spanned from revamping the public saftey responses during natural disasters to credential management
+                    on government devices. These projects consisted of holding meetings with the stateholders, writing up technical drafts,
+                    and creating informaitive presentations. Ultimately, the team would come up with a stance as to how to tackle this project,
+                    and then present the review to the senior directors. 
+                </p>
+            </div>
+            <div id="2" style="display: none">
+                <h3>University of Missouri</h3>
+                <h4><em>Department of Agricultural Engineering</em></h4>
+                <h5>January 2021 - Present</h5>
+                <p>
+                    I currently work with a professor in the Agricultural Engineering department to help him with his hydrology research.
+                    This past semester, I built a program that calculates the evapotranspiration over a large data set. The next stages of this
+                    work involve creating a web application that reads the output of this data and graphs it for users to visually see the data.
+                    I have enjoyed working alongside the researchers and professors and the work they are doing will help farmers, hydrologists, 
+                    and hopefully even the State of Missouri itself.
+                </p>
+            </div>
+            <div id="3" style="display: none">
+                <h3>CS 2830</h3>
+                <h4>Web Development I</h4>
+                <p> 
+                    In CS 2830, we got an introductory view to web development.
+                    Numerous topics were covered, including introductory PHP programming, basic Javascript, 
+                    and NodeJS. At the very end of the course, we learned how to integrate Bootstrap into
+                    our programs to make them look more professional.
+                </p>
+                <p>
+                    Official Description from the University of Missouri website:
+                    "This course will attempt to provide a comprehensive understanding of the evolution, the technologies, 
+                    and the tools of the Internet. In particular, issues pertaining to the World Wide Web and Multimedia 
+                    (HTML, CGI, Web based applications) will be discussed in detail."
+                </p>
+            </div>
+            <div id="4" style="display: none">
+                <h3>CS 2050</h3>
+                <h4>Alogrithm Design and Programming II in C</h4>
+                <p> 
+                    CS 2050 is one of the first serious programming classes. CS 2050 is the second course in the Alogrithm and Design class arc.
+                    CS 2050 taught higher level code design patterns and important data structes such as heaps, stacks, and trees.
+                </p>
+                <p>
+                    Official Description from the University of Missouri website:
+                    "A study of fundamental techniques and algorithms for representing and manipulating data structures. 
+                    Topics include data abstraction, recursion, stacks, queues, linked lists, trees, efficient methods of sorting and searching, 
+                    and Big-O analysis."
+                </p>
+            </div>
+            <div id="5" style="display: none">
+                <h3>CS 3050</h3>
+                <h4>Advanced Algorithm Design</h4>
+                <p> 
+                    CS 3050 is one of the most important classes in the CS track. CS 3050 teaches the applicable usage of complex data structes 
+                    such as search trees and graphs. The mathmatical proofs behind these major concepts is taught in depth and there is an emphasis 
+                    on the efficiency behind these data structures.
+                </p>
+                <p>
+                    "Official Description from the University of Missouri website:
+                    This class surveys fundamental algorithms and data structures that have wide practical applicability,
+                    including search trees and graph algorithms.  Emphasis is placed on techniques for efficient implementation and good 
+                    software development methodologies."
+                </p>
+            </div>
+        </div>
+        <div id="future" style="display: none">
+            <h3>Post College Plans</h3>
+            <h4>(at least at the moment)</h4>
+            <p> 
+                After college I hope to be a software engineer. From my expierences, I love to code and I enjoy building programs. 
+                The question I always ask myself is where do I see myself working one day. This question is hard to answer, 
+                but I would love to work somewhere that the goal of the company isn't to only make a profit. I like the idea of using my skills
+                to help a company that isn't necessarily a tech company but does interesting work. For example, I knew a computer science student 
+                who went to work for a healthcare company that develops life-saving implants. He helped develop the tech parts of the devices. 
+                I believe that something like that would be a good fit for me.
+            </p>
+        </div>
+        
+        <div id="resume">
+            <label><p>If you would like to download my resume please go ahead!</p></label>
+            <a class="btn btn-success" role="button" href="/LukeSchaefer_Resume.pdf" download="LukeSchaefer_Resume">
+                Download Resume
+            </a>   
+        </div>
+        
+   
+    </body>
+    <script>
+        function showInfo(divId) {
+            for(let i =  0; i < 6; i++) {
+                if(divId == i) {
+                    document.getElementById(`${i}`).style.display = "block";
+                }
+                else {
+                    document.getElementById(`${i}`).style.display = "none";
+                }
+                
+            }
+           
+        }
+        function togglePage(divId) {
+            const pages= ["work", "classes", "future", "intro"];
+            
+            for(let i = 0; i < 4; i++) {
+                document.getElementById(pages[i]).style.display = "none";
+            }
+            document.getElementById(pages[divId]).style.display = "block";
+            showInfo(-1);
+            
+        }
+    </script>
+</html>
